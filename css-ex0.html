@@ -4,7 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phase 0-2: CSS基礎確認</title>
-  <link rel="stylesheet" href="css-ex0-style.css" />
+  <style>
+    /* ========= 基本設定 ========= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f9fafb;
+      color: #222;
+    }
+
+    /* ========= 課題1: テキストスタイリング ========= */
+    .large-text {
+      font-size: 24px;
+    }
+
+    .colored-text {
+      color: blue;
+    }
+
+    .bold-text {
+      font-weight: bold;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    /* ========= 課題2: ボックスレイアウト ========= */
+    .box {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .box1 {
+      background: #e74c3c;
+    }
+
+    .box2 {
+      background: #2ecc71;
+    }
+
+    .box3 {
+      background: #3498db;
+      border-radius: 20px;
+    }
+
+    /* ========= 課題3: レスポンシブデザイン ========= */
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .grid-item {
+      background: #ecf0f1;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    /* 600px以下 → 2列 */
+    @media (max-width: 600px) {
+      .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* 400px以下 → 1列 */
+    @media (max-width: 400px) {
+      .responsive-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,92 +133,3 @@
   </footer>
 </body>
 </html>
-
-/* ========= 基本設定 ========= */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  margin: 20px;
-  background: #f9fafb;
-  color: #222;
-}
-
-/* ========= 課題1: テキストスタイリング ========= */
-.large-text {
-  font-size: 24px;
-}
-
-.colored-text {
-  color: blue;
-}
-
-.bold-text {
-  font-weight: bold;
-}
-
-.center-text {
-  text-align: center;
-}
-
-/* ========= 課題2: ボックスレイアウト ========= */
-.box {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.box1 {
-  background: #e74c3c;
-}
-
-.box2 {
-  background: #2ecc71;
-}
-
-.box3 {
-  background: #3498db;
-  border-radius: 20px;
-}
-
-/* ========= 課題3: レスポンシブデザイン ========= */
-.responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.grid-item {
-  background: #ecf0f1;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-/* 600px以下 → 2列 */
-@media (max-width: 600px) {
-  .responsive-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 400px以下 → 1列 */
-@media (max-width: 400px) {
-  .responsive-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
