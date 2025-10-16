@@ -4,51 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 0-1: HTML基礎確認</title>
-</head>
-<body>
-
-　　<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>動く時計</title>
     <script>
         function updateClock() {
             // 現在時刻を取得
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var seconds = now.getSeconds();
-            
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
             // 1桁の場合は0を付ける
             if (hours < 10) hours = '0' + hours;
             if (minutes < 10) minutes = '0' + minutes;
             if (seconds < 10) seconds = '0' + seconds;
-            
+
             // 時刻を表示
-            var timeString = hours + ':' + minutes + ':' + seconds;
+            const timeString = hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerHTML = timeString;
         }
-        
+
         // 1秒ごとにupdateClock関数を実行
         setInterval(updateClock, 1000);
-        
+
         // ページ読み込み時に即座に表示
         window.onload = updateClock;
     </script>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        #clock {
+            font-size: 48px;
+            font-weight: bold;
+            color: blue;
+            margin-bottom: 20px;
+        }
+        div {
+            margin-bottom: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
     <h1>現在時刻</h1>
-    <div id="clock" style="font-size: 48px; font-weight: bold; color: blue;">
-        00:00:00
-    </div>
-    
-    <!-- ここに既存のコンテンツを配置 -->
-</body>
-</html>
-    
+    <div id="clock">00:00:00</div>
+
     <img src="top.png" width="300" alt="トップ画像">
+
     <h1>🌐 Phase 0-1: HTML基礎確認</h1>
+
     <div>
         <h2>📝 課題1: 自己紹介セクション作成</h2>
         <p><strong>指示:</strong> 下記のHTMLコメント部分に、あなたの自己紹介を書いてください。</p>
@@ -61,18 +66,20 @@
         -->
         <p>✅ 完了したら、この課題は終了です</p>
     </div>
+
     <div>
         <h2>📋 課題2: リスト作成</h2>
         <p><strong>指示:</strong> 好きな食べ物を5つ、番号付きリスト（ol）で作成してください。</p>
         <!-- ここに好きな食べ物のリストを作成してください -->
-    <o1>
-        <li>イチゴ</li>
-        <li>リンゴ</li>
-        <li>マンゴー</li>
-        <li>ドラゴンフルーツ</li>
-        <li>サンゴ</li>
-    </o1>
+        <ol>
+            <li>イチゴ</li>
+            <li>リンゴ</li>
+            <li>マンゴー</li>
+            <li>ドラゴンフルーツ</li>
+            <li>サンゴ</li>
+        </ol>
     </div>
+
     <div>
         <h2>🔗 課題3: リンク作成</h2>
         <p><strong>指示:</strong> 以下のリンクを作成してください：</p>
@@ -80,7 +87,7 @@
             <li><a href="https://www.google.com" target="_blank">Google（新しいタブで開く）</a></li>
             <li><a href="https://www.github.com" target="_blank">GitHub（新しいタブで開く）</a></li>
         </ul>
-      <!-- ここにリンクを作成してください -->
     </div>
 </body>
 </html>
+
