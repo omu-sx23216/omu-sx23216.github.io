@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phase 0-2: CSS基礎確認</title>
-
-  <!-- 外部CSSを読み込む -->
-  <link rel="stylesheet" href="css-ex0-style.css">
-
-  <!-- ページ内で使う軽いスクリプト（必要なら） -->
-  <script>
-    // 簡単なヘルパー：ページ読み込み時にコンソールへメッセージ
-    window.addEventListener('DOMContentLoaded', function () {
-      console.log('ページ読み込み完了: Phase 0-2');
-    });
-  </script>
+  <link rel="stylesheet" href="css-ex0-style.css" />
 </head>
+
 <body>
-  <!-- ヘッダー -->
   <header>
-    <!-- 画像ファイル top.png を同じフォルダに置くと表示されます -->
-    <img src="top.png" width="300" alt="トップ画像（top.png）" />
     <h1>🎨 Phase 0-2: CSS基礎確認</h1>
-    <p>CSS基本プロパティの活用練習（ファイル：css-ex0-style.css を編集）</p>
+    <p>CSS基本プロパティの活用練習</p>
   </header>
 
-  <!-- 課題1：テキストスタイリング -->
+  <!-- 🔤 課題1 -->
   <section>
     <h2>🔤 課題1: テキストスタイリング</h2>
-    <p>style.css を編集して、以下の要素にスタイルを適用してください：</p>
+    <p>以下の各クラスにスタイルを適用しています。</p>
 
-    <p class="large-text">この文字を大きく（24px）してください</p>
-    <p class="colored-text">この文字を青色にしてください</p>
-    <p class="bold-text">この文字を太字にしてください</p>
-    <p class="center-text">この文字を中央揃えにしてください</p>
+    <p class="large-text">✅ この文字は大きく（24px）</p>
+    <p class="colored-text">✅ この文字は青色</p>
+    <p class="bold-text">✅ この文字は太字</p>
+    <p class="center-text">✅ この文字は中央揃え</p>
   </section>
 
-  <!-- 課題2：ボックスレイアウト -->
+  <!-- 📦 課題2 -->
   <section>
     <h2>📦 課題2: ボックスレイアウト</h2>
-    <p>以下の3つのボックスにスタイルを適用してください：</p>
+    <p>3つのボックスに色や装飾をつけました。</p>
 
-    <div class="box box1" role="region" aria-label="ボックス1">ボックス1: 背景色を赤に</div>
-    <div class="box box2" role="region" aria-label="ボックス2">ボックス2: 背景色を緑、白文字に</div>
-    <div class="box box3" role="region" aria-label="ボックス3">ボックス3: 背景色を青、角を丸く</div>
+    <div class="box box1">ボックス1：赤背景</div>
+    <div class="box box2">ボックス2：緑背景＋白文字</div>
+    <div class="box box3">ボックス3：青背景＋角丸</div>
   </section>
 
-  <!-- 課題3：レスポンシブデザイン -->
+  <!-- 🎯 課題3 -->
   <section>
     <h2>🎯 課題3: レスポンシブデザイン基礎</h2>
-    <p>画面サイズに応じてレイアウトが変わることを確認してください：</p>
+    <p>画面幅に応じて列数が変わります（600px以下で2列、400px以下で1列）。</p>
 
-    <div class="responsive-grid" aria-label="レスポンシブグリッド">
+    <div class="responsive-grid">
       <div class="grid-item">アイテム1</div>
       <div class="grid-item">アイテム2</div>
       <div class="grid-item">アイテム3</div>
@@ -59,9 +47,8 @@
     </div>
   </section>
 
-  <!-- フッター -->
   <footer>
-    <p>作成日: <time datetime="2025-10-16">2025-10-16</time></p>
+    <p>© 2025 CSS基礎練習</p>
   </footer>
 </body>
 </html>
