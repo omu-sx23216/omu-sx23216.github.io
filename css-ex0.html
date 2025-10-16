@@ -1,38 +1,70 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase 0-2: CSS基礎確認</title>
-    <link rel="stylesheet" href="css-ex0-style.css">
-</head>
-<body>
-    <h1>🎨 Phase 0-2: CSS基礎確認</h1>
-    <p>CSS基本プロパティの活用練習</p>
+/* 🎨 課題1: テキストスタイリング */
+.large-text {
+  font-size: 24px;
+}
 
-    <h2>🔤 課題1: テキストスタイリング</h2>
-    <p>style.cssを編集して、以下の要素にスタイルを適用してください：</p>
-    
-    <p class="large-text">この文字を大きく（24px）してください</p>
-    <p class="colored-text">この文字を青色にしてください</p>
-    <p class="bold-text">この文字を太字にしてください</p>
-    <p class="center-text">この文字を中央揃えにしてください</p>
+.colored-text {
+  color: blue;
+}
 
-    <h2>📦 課題2: ボックスレイアウト</h2>
-    <p>以下の3つのボックスにスタイルを適用してください：</p>
-    
-    <div class="box box1">ボックス1: 背景色を赤に</div>
-    <div class="box box2">ボックス2: 背景色を緑、白文字に</div>
-    <div class="box box3">ボックス3: 背景色を青、角を丸く</div>
+.bold-text {
+  font-weight: bold;
+}
 
-    <h2>🎯 課題3: レスポンシブデザイン基礎</h2>
-    <p>画面サイズに応じてレイアウトが変わることを確認してください：</p>
-    
-    <div class="responsive-grid">
-        <div class="grid-item">アイテム1</div>
-        <div class="grid-item">アイテム2</div>
-        <div class="grid-item">アイテム3</div>
-        <div class="grid-item">アイテム4</div>
-    </div>
-</body>
-</html>
+.center-text {
+  text-align: center;
+}
+
+/* 📦 課題2: ボックスレイアウト */
+.box {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  display: inline-block;
+  text-align: center;
+  line-height: 100px; /* 文字を縦中央に */
+}
+
+.box1 {
+  background-color: red;
+}
+
+.box2 {
+  background-color: green;
+  color: white;
+}
+
+.box3 {
+  background-color: blue;
+  color: white;
+  border-radius: 15px;
+}
+
+/* 🎯 課題3: レスポンシブデザイン基礎 */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: lightgray;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 画面幅が600px以下のとき、2列にする */
+@media (max-width: 600px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 画面幅が400px以下のとき、1列にする */
+@media (max-width: 400px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}
