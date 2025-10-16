@@ -13,43 +13,124 @@
     <p>CSS基本プロパティの活用練習</p>
   </header>
 
-  <!-- 🔤 課題1 -->
-  <section>
-    <h2>🔤 課題1: テキストスタイリング</h2>
-    <p>以下の各クラスにスタイルを適用しています。</p>
+  <main>
+    <section>
+      <h2>課題1: テキストスタイリング</h2>
+      <p class="large-text">大きな文字です。</p>
+      <p class="colored-text">青い文字です。</p>
+      <p class="bold-text">太字の文字です。</p>
+      <p class="center-text">中央寄せの文字です。</p>
+    </section>
 
-    <p class="large-text">✅ この文字は大きく（24px）</p>
-    <p class="colored-text">✅ この文字は青色</p>
-    <p class="bold-text">✅ この文字は太字</p>
-    <p class="center-text">✅ この文字は中央揃え</p>
-  </section>
+    <section>
+      <h2>課題2: ボックスレイアウト</h2>
+      <div class="box box1">Box 1</div>
+      <div class="box box2">Box 2</div>
+      <div class="box box3">Box 3</div>
+    </section>
 
-  <!-- 📦 課題2 -->
-  <section>
-    <h2>📦 課題2: ボックスレイアウト</h2>
-    <p>3つのボックスに色や装飾をつけました。</p>
-
-    <div class="box box1">ボックス1：赤背景</div>
-    <div class="box box2">ボックス2：緑背景＋白文字</div>
-    <div class="box box3">ボックス3：青背景＋角丸</div>
-  </section>
-
-  <!-- 🎯 課題3 -->
-  <section>
-    <h2>🎯 課題3: レスポンシブデザイン基礎</h2>
-    <p>画面幅に応じて列数が変わります（600px以下で2列、400px以下で1列）。</p>
-
-    <div class="responsive-grid">
-      <div class="grid-item">アイテム1</div>
-      <div class="grid-item">アイテム2</div>
-      <div class="grid-item">アイテム3</div>
-      <div class="grid-item">アイテム4</div>
-    </div>
-  </section>
+    <section>
+      <h2>課題3: レスポンシブデザイン</h2>
+      <div class="responsive-grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 CSS基礎練習</p>
   </footer>
 </body>
 </html>
+
+/* ========= 基本設定 ========= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background: #f9fafb;
+  color: #222;
+}
+
+/* ========= 課題1: テキストスタイリング ========= */
+.large-text {
+  font-size: 24px;
+}
+
+.colored-text {
+  color: blue;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* ========= 課題2: ボックスレイアウト ========= */
+.box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.box1 {
+  background: #e74c3c;
+}
+
+.box2 {
+  background: #2ecc71;
+}
+
+.box3 {
+  background: #3498db;
+  border-radius: 20px;
+}
+
+/* ========= 課題3: レスポンシブデザイン ========= */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.grid-item {
+  background: #ecf0f1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* 600px以下 → 2列 */
+@media (max-width: 600px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 400px以下 → 1列 */
+@media (max-width: 400px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
