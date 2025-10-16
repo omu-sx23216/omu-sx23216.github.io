@@ -1,4 +1,9 @@
+<head>
 <title>テスト1</title>
+</head
+>
+
+<h1>これh1</h1>
 
 <form oninput="mass.value = Math.round(Math.sqrt(Math.pow(Number(a.value), 2) + Math.pow(Number(b.value), 2))*10)/10;">
     a：<input name="a" style="width: 80px;" type="number" value=""> cm
@@ -6,7 +11,7 @@
     斜辺の長さ c ＝ <output name="mass">0</output> cm
 </form>
 
-<title>テスト2</title>
+<h2>テスト2</h2>
 
 <form onsubmit="return false">
     <input type="number" id="num01"> 演算
@@ -24,7 +29,7 @@
         (cal0[1].checked)? Number(num01.value) - Number(num02.value) : NaN">計算</button>
 </form>
 
-<title>テスト3</title>
+<h3>テスト3</h3>
 
 <h2>BMI指標計算</h2>
 <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
