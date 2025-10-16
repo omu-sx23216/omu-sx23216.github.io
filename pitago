@@ -1,5 +1,34 @@
+<title>テスト1</title>
+
 <form oninput="mass.value = Math.round(Math.sqrt(Math.pow(Number(a.value), 2) + Math.pow(Number(b.value), 2))*10)/10;">
     a：<input name="a" style="width: 80px;" type="number" value=""> cm
     b：<input name="b" style="width: 80px;" type="number" value=""> cm
     斜辺の長さ c ＝ <output name="mass">0</output> cm
+</form>
+
+<title>テスト2</title>
+
+<form onsubmit="return false">
+    <input type="number" id="num01"> 演算
+    <input type="number" id="num02"> =
+    <output for="num01 num02" id="result0"></output>
+    
+    <!-- ラジオボタン選択肢 -->
+    <input id="plus" type="radio" name="cal0" value="+" checked>
+    <label for="plus">足す</label>
+    <input id="minus" type="radio" name="cal0" value="-">
+    <label for="minus">引く</label>
+    
+    <button onclick="result0.value = 
+        (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
+        (cal0[1].checked)? Number(num01.value) - Number(num02.value) : NaN">計算</button>
+</form>
+
+<title>テスト3</title>
+
+<h2>BMI指標計算</h2>
+<form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
+    <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
+    <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+    <p><label>BMI：<output name="bmi"></output></label></p>
 </form>
