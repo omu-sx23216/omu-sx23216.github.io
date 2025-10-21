@@ -47,13 +47,13 @@
     <tr>
       <th rowspan="2"colspan='2'>テストA</th>
       <td>A-1</td>
-      <td>4.56</td>
-      <td>3.21</td>
+      <td colspan='3'>4.56</td>
+      <td colspan='3'>3.21</td>
     </tr>
     <tr>
       <td>A-2</td>
-      <td>3.82</td>
-      <td>2.54</td>
+      <td colspan='3'>3.82</td>
+      <td colspan='3'>2.54</td>
     </tr>
 
     <!-- テストB -->
