@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提出課題：テーブル作成</title>
+  <style>
+    table {
+      width: 500px;
+      height: 300px;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+    }
+    th {
+      background-color: #ffffcc;
+    }
+    td {
+      text-align: center;
+    }
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>実験概要</caption>
+    <tr>
+      <th rowspan="2">目的</th>
+      <td colspan="2">テストAについて．．．</td>
+    </tr>
+    <tr>
+      <td colspan="2">テストBについて．．．</td>
+    </tr>
+    <tr>
+      <th rowspan="2">項目</th>
+      <th>実験群</th>
+      <th>統制群</th>
+    </tr>
+    <tr>
+      <th rowspan="2">テストA</th>
+      <td>A-1</td>
+      <td>4.56</td>
+      <td>3.21</td>
+    </tr>
+    <tr>
+      <td>A-2</td>
+      <td>3.82</td>
+      <td>2.54</td>
+    </tr>
+    <tr>
+      <th rowspan="2">テストB</th>
+      <td>B-1</td>
+      <td>4.32</td>
+      <td>4.29</td>
+    </tr>
+    <tr>
+      <td>B-2</td>
+      <td>3.55</td>
+      <td>2.83</td>
+    </tr>
+  </table>
+
+</body>
+</html>
