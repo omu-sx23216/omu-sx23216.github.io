@@ -5,18 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>提出課題：テーブル作成</title>
   <style>
-    table {
-      width: 500px;
-      height: 300px;
-      border-collapse: collapse;
-      margin: 30px auto;
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-    }
+    table, td, th { border: 1px solid black; }
+
     th {
       background-color: #ffffcc;
+      text-align: center;
+      vertical-align: middle;
     }
     td {
       text-align: center;
@@ -33,26 +27,25 @@
   <table>
     <caption>実験概要</caption>
 
-    <!-- 目的行 -->
+    <!-- 目的 -->
     <tr>
-      <th rowspan="2">目的</th>
-      <td colspan="3">テストAについて．．．</td>
+      <th rowspan="2"colspan='3'>目的</th>
+      <td colspan="6">テストAについて．．．</td>
     </tr>
     <tr>
-      <td colspan="3">テストBについて．．．</td>
+      <td colspan="6">テストBについて．．．</td>
     </tr>
 
-    <!-- 項目行 -->
+    <!-- 項目 -->
     <tr>
-      <th rowspan="6">項目</th>
-      <th>実験群</th>
-      <th>統制群</th>
-      <th></th>
+      <th colspan='3'>項目</th>
+      <th colspan='3'>実験群</th>
+      <th colspan='3'>統制群</th>
     </tr>
 
     <!-- テストA -->
     <tr>
-      <th rowspan="2">テストA</th>
+      <th rowspan="2"colspan='2'>テストA</th>
       <td>A-1</td>
       <td>4.56</td>
       <td>3.21</td>
@@ -65,15 +58,15 @@
 
     <!-- テストB -->
     <tr>
-      <th rowspan="2">テストB</th>
+      <th rowspan="2"colspan='2'>テストB</th>
       <td>B-1</td>
-      <td>4.32</td>
-      <td>4.29</td>
+      <td colspan='3'>4.32</td>
+      <td colspan='3'>4.29</td>
     </tr>
     <tr>
       <td>B-2</td>
-      <td>3.55</td>
-      <td>2.83</td>
+      <td colspan='3'>3.55</td>
+      <td colspan='3'>2.83</td>
     </tr>
   </table>
 
