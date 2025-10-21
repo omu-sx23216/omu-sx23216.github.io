@@ -9,10 +9,10 @@
       width: 500px;
       height: 300px;
       border-collapse: collapse;
-      margin: 20px auto;
+      margin: 30px auto;
     }
     th, td {
-      border: 1px solid #999;
+      border: 1px solid #000;
       padding: 8px;
     }
     th {
@@ -32,18 +32,25 @@
 
   <table>
     <caption>実験概要</caption>
+
+    <!-- 目的行 -->
     <tr>
       <th rowspan="2">目的</th>
-      <td colspan="2">テストAについて．．．</td>
+      <td colspan="3">テストAについて．．．</td>
     </tr>
     <tr>
-      <td colspan="2">テストBについて．．．</td>
+      <td colspan="3">テストBについて．．．</td>
     </tr>
+
+    <!-- 項目行 -->
     <tr>
-      <th rowspan="2">項目</th>
+      <th rowspan="6">項目</th>
       <th>実験群</th>
       <th>統制群</th>
+      <th></th>
     </tr>
+
+    <!-- テストA -->
     <tr>
       <th rowspan="2">テストA</th>
       <td>A-1</td>
@@ -55,6 +62,8 @@
       <td>3.82</td>
       <td>2.54</td>
     </tr>
+
+    <!-- テストB -->
     <tr>
       <th rowspan="2">テストB</th>
       <td>B-1</td>
